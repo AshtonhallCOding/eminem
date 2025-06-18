@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="achievements.html">Achievements</a></li>
+<li><button id="dark-mode-toggle">Dark mode</button></li>
+</ul>
+</nav>
+<h1>Eminem's legacy</h1>
+</header>
+
+<main>
+<section id="personas">
+<h2>Eminem's personas</h2>
+<div class="persona-grid">
+<div class="persona-card" onclick="toggle_persona_info('mathers')">
+<img src="images/marshall.jpg">
+<h3>Marshall mathers</h3>
+<p class="persona-info hidden">The real person behind the fame who has deeply personal lyrics</p>
+</div>
+<div class="persona-card" onclick="toggle_persona_info('shady')">
+<img src="images/slim.jpg">
+<h3>Slim shady</h3>
+<p class="persona-info hidden">The alter ego known for his dark humor and controversial lyrics</p>
+</div>
+</div>
+</section>
+
+<section id="intro">
+<h2>The rise of Marshall mathers</h2>
+<div class="image-container">
+<img id="main-image" src="images/young.jpg">
+<button onclick="change_image()">See eminem now</button>
+</div>
+<p>Eminem is one of the most influential rappers of all time</p>
+<button onclick="reveal_fun_fact()">Show fun fact</button>
+<div id="fun-fact" class="hidden"></div>
+</section>
+
+<section id="fan-comment">
+<h2>Leave your eminem memory</h2>
+<form onsubmit="add_comment(event)">
+<textarea id="fan-memory" placeholder="your favorite eminem memory or song" required></textarea>
+<input type="text" id="fan-name" placeholder="your name" required>
+<button type="submit">Submit</button>
+</form>
+<h3>Fan memories</h3>
+<div id="comments-list"></div>
+</section>
+</main>
+
+<footer>
+<p>Created by a random dude who loves Eminem</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
